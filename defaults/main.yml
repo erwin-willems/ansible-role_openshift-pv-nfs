@@ -1,0 +1,2 @@
+---
+nfs_exports: [ "/export/persistent-storage *(rw,root_squash)" ]
