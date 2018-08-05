@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv0005 
+spec:
+  capacity:
+    storage: 1Gi 
+  accessModes:
+  - ReadWriteOnce 
+  nfs: 
+    path: /export/persistent-storage/pv0005
+    server: nfs-server.veetikut.com
+  persistentVolumeReclaimPolicy: Recycle 
+

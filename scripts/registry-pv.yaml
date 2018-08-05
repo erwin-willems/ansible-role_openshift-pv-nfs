@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: registry-nfs
+spec:
+  capacity:
+    storage: 5Gi 
+  accessModes:
+  - ReadWriteOnce 
+  nfs: 
+    path: /export/persistent-storage/pv-registry
+    server: nfs-server.veetikut.com
+  persistentVolumeReclaimPolicy: Recycle 
+
